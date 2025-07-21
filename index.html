@@ -136,21 +136,29 @@
 <script>
   const langButtons = document.querySelectorAll(".lang-btn");
   const translatables = document.querySelectorAll("[data-en][data-ka]");
+  const defaultLang = "ka"; // Set default language here
+
+  function switchLanguage(lang) {
+    langButtons.forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.lang === lang);
+    });
+
+    translatables.forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+
+    document.title = document.querySelector("title").dataset[lang];
+  }
+
+  // Set default language on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    switchLanguage(defaultLang);
+  });
 
   langButtons.forEach(button => {
     button.addEventListener("click", () => {
-      const lang = button.dataset.lang;
-      langButtons.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
-
-      translatables.forEach(el => {
-        el.textContent = el.dataset[lang];
-      });
-
-      document.title = document.querySelector("title").dataset[lang];
+      switchLanguage(button.dataset.lang);
     });
   });
 </script>
 
-</body>
-</html>
