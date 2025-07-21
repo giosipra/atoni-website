@@ -5,27 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>წმინად მთის მოლოცვითი ტური</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    header, section { padding: 20px; }
-    h1, h2 { color: #2c3e50; }
-    .hero { width: 100%; height: 300px; background: url('Athos1.jpg') center/cover no-repeat; }
-    .details { background: #f7f7f7; padding: 20px; }
-    .gallery img { width: 30%; margin: 5px; border-radius: 10px; }
-    .map-container { margin-top: 20px; }
-    .contact-btn { display: inline-block; padding: 10px 20px; background: #2c3e50; color: white; text-decoration: none; border-radius: 5px; }
-    .lang-switch { display: flex; justify-content: flex-end; padding: 10px 20px; }
-    .lang-switch a { font-size: 14px; background: #eee; padding: 5px 10px; border-radius: 5px; text-decoration: none; color: #333; }
-    .lang-switch a:hover { background: #ddd; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header, section {
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    .hero-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+
+    .hero {
+      width: 100%;
+      height: 100%;
+      background: url('Athos1.jpg') center/cover no-repeat;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .lang-switch a {
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.2s;
+    }
+
+    .lang-switch a:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .details {
+      background: #f7f7f7;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 30%;
+      margin: 5px;
+      border-radius: 10px;
+    }
+
+    .map-container {
+      margin-top: 20px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #2c3e50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
   </style>
 </head>
 <body>
 
-<div class="hero-container">
-  <div class="hero"></div>
-  <div class="lang-switch">
-    <a href="athos-tour.html">English</a>
+  <div class="hero-container">
+    <div class="hero"></div>
+    <div class="lang-switch">
+      <a href="athos-tour.html">English</a>
+    </div>
   </div>
-</div>
 
   <header>
     <h1>წმინად მთის მოლოცვითი ტური</h1>
